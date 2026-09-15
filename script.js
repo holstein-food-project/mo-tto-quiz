@@ -374,7 +374,7 @@ const levels = [
     id: 3,
     name: "牛肉マスター",
     unlock: 180,
-    icon: "🥩",
+    icon: "🎖️",
     description: "トレーサビリティにも挑戦！"
   },
   {
@@ -465,7 +465,7 @@ const books = [
   },
   {
     name: "交雑種（F1）",
-    icon: "🐄×🐮",
+    icon: "🌟",
     unlock: 180,
     text: "ホルスタイン雌と黒毛和種雄の交配が代表例。"
   },
@@ -494,14 +494,14 @@ const recipes = [
   },
   {
     name: "牛肉と卵のふんわり炒め",
-    icon: "🥩×🥚",
+    icon: "🥚",
     unlock: 50,
     difficulty: "★☆☆☆☆",
     text: "ふわふわの卵が相性抜群！"
   },
   {
     name: "牛肉のすき焼き丼",
-    icon: "🥘",
+    icon: "🍚",
     unlock: 80,
     difficulty: "★☆☆☆☆",
     text: "すき焼きのうまさがどんぶり一杯に！"
@@ -515,7 +515,7 @@ const recipes = [
   },
  {
     name: "とろけるチーズ牛丼",
-    icon: "🍚×🧀",
+    icon: "🧀",
     unlock: 140,
     difficulty: "★★☆☆☆",
     text: "牛丼とチーズの相性バッチリ！"
@@ -529,7 +529,7 @@ const recipes = [
   },
 {
     name: "牛肉コロッケ",
-    icon: "🍳",
+    icon: "🥔",
     unlock: 200,
     difficulty: "★★☆☆☆",
     text: "ホクホクのいもと牛肉。"
@@ -585,7 +585,7 @@ const recipes = [
   },
 {
     name: "牛肉ドリア",
-    icon: "🍚×🧀",
+    icon: "🥛",
     unlock: 420,
     difficulty: "★★★★★",
     text: "新感覚ドリア！"
@@ -613,7 +613,7 @@ const recipes = [
   },
 {
     name: "極上・牛ステーキ ～特製赤ワインソース～",
-    icon: "✨️🥩✨️",
+    icon: "✨️",
     unlock: 500,
     difficulty: "★★★★★",
     text: "いちばん特別な日に！"
