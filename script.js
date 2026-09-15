@@ -387,7 +387,7 @@ const levels = [
   {
     id: 5,
     name: "伝説の牛博士",
-    unlock: 550,
+    unlock: 600,
     icon: "👑",
     description: "ひっかけ問題を見抜こう！"
   }
@@ -407,7 +407,7 @@ const farmItems = [
     icon: "🌷",
     name: "花ばたけ",
     cost: 55,
-    unlock: 80,
+    unlock: 100,
     position: "left: 105px; bottom: 22px;"
   },
   {
@@ -415,7 +415,7 @@ const farmItems = [
     icon: "🌾",
     name: "ふかふか牧草",
     cost: 65,
-    unlock: 80,
+    unlock: 100,
     position: "right: 13px; bottom: 18px;"
   },
   {
@@ -423,14 +423,14 @@ const farmItems = [
     icon: "🚜",
     name: "トラクター",
     cost: 110,
-    unlock: 180,
+    unlock: 250,
     position: "left: 145px; bottom: 15px;"
   },
   {
     id: "ribbon",
     icon: "🎀",
     name: "牛のリボン",
-    cost: 75,
+    cost: 400,
     unlock: 180,
     position: "right: 77px; bottom: 98px;"
   },
@@ -438,7 +438,7 @@ const farmItems = [
     id: "house",
     icon: "🏡",
     name: "牧場ハウス",
-    cost: 180,
+    cost: 700,
     unlock: 320,
     position: "right: 7px; bottom: 68px;"
   }
@@ -460,19 +460,19 @@ const books = [
   {
     name: "ジャージー種",
     icon: "🐂",
-    unlock: 250,
+    unlock: 300,
     text: "乳脂率が高めのミルクで知られる乳用牛。"
   },
   {
     name: "交雑種（F1）",
     icon: "🌟",
-    unlock: 350,
+    unlock: 450,
     text: "ホルスタイン雌と黒毛和種雄の交配が代表例。"
   },
   {
     name: "トレーサビリティ",
     icon: "🔎",
-    unlock: 450,
+    unlock: 600,
     text: "個体識別番号で牛の情報を確認できる仕組み。"
   }
 ];
