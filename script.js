@@ -1092,8 +1092,8 @@ function renderFarm() {
 
       if (isOwned) {
         actionButton = `<button disabled>設置済み</button>`;
-      } else if (isLocked) {
-        actionButton = `<button disabled>🔒 Lv.${levelForItem.id}で解放</button>`;
+  　  } else if (isLocked) {
+　　　   actionButton = `<button disabled>🔒 ${item.unlock}Pで解放</button>`;
       } else {
         actionButton = `<button data-buy="${item.id}">⭐ ${item.cost}Pで購入</button>`;
       }
