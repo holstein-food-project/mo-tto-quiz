@@ -454,25 +454,25 @@ const books = [
   {
     name: "黒毛和種",
     icon: "🐮",
-    unlock: 80,
+    unlock: 150,
     text: "和牛の代表的な品種。肉質の良さで知られる。"
   },
   {
     name: "ジャージー種",
     icon: "🐂",
-    unlock: 180,
+    unlock: 250,
     text: "乳脂率が高めのミルクで知られる乳用牛。"
   },
   {
     name: "交雑種（F1）",
     icon: "🌟",
-    unlock: 180,
+    unlock: 350,
     text: "ホルスタイン雌と黒毛和種雄の交配が代表例。"
   },
   {
     name: "トレーサビリティ",
     icon: "🔎",
-    unlock: 320,
+    unlock: 450,
     text: "個体識別番号で牛の情報を確認できる仕組み。"
   }
 ];
@@ -488,133 +488,133 @@ const recipes = [
   {
     name: "牛肉の甘辛炒め",
     icon: "🍗",
-    unlock: 30,
+    unlock: 100,
     difficulty: "★☆☆☆☆",
     text: "甘辛い味つけでごはんが進む！"
   },
   {
     name: "牛肉と卵のふんわり炒め",
     icon: "🥚",
-    unlock: 50,
+    unlock: 150,
     difficulty: "★☆☆☆☆",
     text: "ふわふわの卵が相性抜群！"
   },
   {
     name: "牛肉のすき焼き丼",
     icon: "🍚",
-    unlock: 80,
+    unlock: 210,
     difficulty: "★☆☆☆☆",
     text: "すき焼きのうまさがどんぶり一杯に！"
   },
   {
     name: "牛肉じゃが",
     icon: "🥔",
-    unlock: 120,
+    unlock: 250,
     difficulty: "★★☆☆☆",
     text: "牛肉の旨みたっぷりで、ほっとする味。"
   },
  {
     name: "とろけるチーズ牛丼",
     icon: "🧀",
-    unlock: 140,
+    unlock: 300,
     difficulty: "★★☆☆☆",
     text: "牛丼とチーズの相性バッチリ！"
   },
  {
     name: "牛肉オムライス",
     icon: "🍳",
-    unlock: 160,
+    unlock: 350,
     difficulty: "★★☆☆☆",
     text: "ふわとろ卵に牛肉の旨味が合う！"
   },
 {
     name: "牛肉コロッケ",
     icon: "🥔",
-    unlock: 200,
+    unlock: 420,
     difficulty: "★★☆☆☆",
     text: "ホクホクのいもと牛肉。"
   },
 {
     name: "牛肉チーズ春巻き",
     icon: "🫔",
-    unlock: 220,
+    unlock: 500,
     difficulty: "★★★☆☆",
     text: "やみつき注意！牛肉チーズのパリパリ春巻き。"
   },
 {
     name: "牛肉ピロシキ",
     icon: "🥐",
-    unlock: 240,
+    unlock: 550,
     difficulty: "★★★☆☆",
     text: "おやつにもご飯にも！"
   },
 {
     name: "牛肉ピザ",
     icon: "🍕",
-    unlock: 260,
+    unlock: 580,
     difficulty: "★★★☆☆",
     text: "牛肉たっぷり、贅沢ピザ！"
   },
 {
     name: "牛肉サンド",
     icon: "🥪",
-    unlock: 300,
+    unlock: 630,
     difficulty: "★★★☆☆",
     text: "ひとくちで牛肉のごちそう！"
   },
 {
     name: "ビーフカレー",
     icon: "🍛",
-    unlock: 320,
+    unlock: 700,
     difficulty: "★★★★☆",
     text: "ごろっと牛肉の濃厚カレー！"
   },
 {
     name: "牛肉ミートパスタ",
     icon: "🍝",
-    unlock: 340,
+    unlock: 800,
     difficulty: "★★★★☆",
     text: "いつものパスタを牛肉で贅沢に！"
   },
 {
     name: "すき焼き",
     icon: "🍲",
-    unlock: 360,
+    unlock: 840,
     difficulty: "★★★★☆",
     text: "甘辛うまい！とろける牛肉！"
   },
 {
     name: "牛肉ドリア",
     icon: "🥛",
-    unlock: 420,
+    unlock: 880,
     difficulty: "★★★★★",
     text: "新感覚ドリア！"
   },
 {
     name: "牛肉グラタン",
     icon: "🧀",
-    unlock: 420,
+    unlock: 880,
     difficulty: "★★★★★",
     text: "とろ～りチーズの牛肉グラタン！"
   },
 {
     name: "牛肉焼きおにぎり",
     icon: "🍙",
-    unlock: 440,
+    unlock: 900,
     difficulty: "★★★★★",
     text: "いつものおにぎりを特別に！"
   },
 {
     name: "牛肉ミートパイ",
     icon: "🥧",
-    unlock: 460,
+    unlock: 950,
     difficulty: "★★★★★",
     text: "自分へのご褒美に！"
   },
 {
     name: "極上・牛ステーキ ～特製赤ワインソース～",
     icon: "✨️",
-    unlock: 500,
+    unlock: 1050,
     difficulty: "★★★★★",
     text: "いちばん特別な日に！"
   }
