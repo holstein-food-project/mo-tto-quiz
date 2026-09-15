@@ -37,7 +37,7 @@ const quizData = [
  {
   level: 1,
   question: "牛乳から作られるものはどれ？",
-  choices: [ "醤油", "のり", "小麦粉""チーズ"],
+  choices: [ "醤油", "のり", "小麦粉", "チーズ"],
   answer: 3,
   fact: "💡牛乳はチーズ、バター、ヨーグルトなど、さまざまな食品に使われます。"
  },
@@ -512,105 +512,105 @@ const recipes = [
     unlock: 120,
     difficulty: "★★☆☆☆",
     text: "牛肉の旨みたっぷりで、ほっとする味。"
-  }
+  },
  {
     name: "とろけるチーズ牛丼",
     icon: "🍚×🧀",
     unlock: 140,
     difficulty: "★★☆☆☆",
     text: "牛丼とチーズの相性バッチリ！"
-  }
+  },
  {
     name: "牛肉オムライス",
     icon: "🍳",
     unlock: 160,
     difficulty: "★★☆☆☆",
     text: "ふわとろ卵に牛肉の旨味が合う！"
-  }
+  },
 {
     name: "牛肉コロッケ",
     icon: "🍳",
     unlock: 200,
     difficulty: "★★☆☆☆",
     text: "ホクホクのいもと牛肉。"
-  }
+  },
 {
     name: "牛肉チーズ春巻き",
     icon: "🫔",
     unlock: 220,
     difficulty: "★★★☆☆",
     text: "やみつき注意！牛肉チーズのパリパリ春巻き。"
-  }
+  },
 {
     name: "牛肉ピロシキ",
     icon: "🥐",
     unlock: 240,
     difficulty: "★★★☆☆",
     text: "おやつにもご飯にも！"
-  }
+  },
 {
     name: "牛肉ピザ",
     icon: "🍕",
     unlock: 260,
     difficulty: "★★★☆☆",
     text: "牛肉たっぷり、贅沢ピザ！"
-  }
+  },
 {
     name: "牛肉サンド",
     icon: "🥪",
     unlock: 300,
     difficulty: "★★★☆☆",
     text: "ひとくちで牛肉のごちそう！"
-  }
+  },
 {
     name: "ビーフカレー",
     icon: "🍛",
     unlock: 320,
     difficulty: "★★★★☆",
     text: "ごろっと牛肉の濃厚カレー！"
-  }
+  },
 {
     name: "牛肉ミートパスタ",
     icon: "🍝",
     unlock: 340,
     difficulty: "★★★★☆",
     text: "いつものパスタを牛肉で贅沢に！"
-  }
+  },
 {
     name: "すき焼き",
     icon: "🍲",
     unlock: 360,
     difficulty: "★★★★☆",
     text: "甘辛うまい！とろける牛肉！"
-  }
+  },
 {
     name: "牛肉ドリア",
     icon: "🍚×🧀",
     unlock: 420,
     difficulty: "★★★★★",
     text: "新感覚ドリア！"
-  }
+  },
 {
     name: "牛肉グラタン",
     icon: "🧀",
     unlock: 420,
     difficulty: "★★★★★",
     text: "とろ～りチーズの牛肉グラタン！"
-  }
+  },
 {
     name: "牛肉焼きおにぎり",
     icon: "🍙",
     unlock: 440,
     difficulty: "★★★★★",
     text: "いつものおにぎりを特別に！"
-  }
+  },
 {
     name: "牛肉ミートパイ",
     icon: "🥧",
     unlock: 460,
     difficulty: "★★★★★",
     text: "自分へのご褒美に！"
-  }
+  },
 {
     name: "極上・牛ステーキ ～特製赤ワインソース～",
     icon: "✨️🥩✨️",
@@ -1942,13 +1942,17 @@ function renderRecipes() {
 /* 詳細モーダルを開く */
 function openRecipeDetail(recipeIndex) {
   const recipe = recipes[recipeIndex];
-  const detail = recipeDetails[recipe.name];
+ const recipe = recipes[recipeIndex];
 
-  if (!recipe || !detail) {
-    return;
-  }
+if (!recipe) {
+  return;
+}
 
-  const modal = $("#recipeModal");
+const detail = recipeDetails[recipe.name];
+
+if (!detail) {
+  return;
+}
 
   $("#recipeModalIcon").textContent = recipe.icon;
   $("#recipeModalLevel").textContent = detail.level;
