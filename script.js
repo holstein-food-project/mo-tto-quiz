@@ -366,28 +366,28 @@ const levels = [
   {
     id: 2,
     name: "牧場スタッフ",
-    unlock: 80,
+    unlock: 150,
     icon: "🧑‍🌾",
     description: "牛肉や交雑種をくわしく知ろう！"
   },
   {
     id: 3,
     name: "牛肉マスター",
-    unlock: 180,
+    unlock: 250,
     icon: "🎖️",
     description: "トレーサビリティにも挑戦！"
   },
   {
     id: 4,
     name: "ホルスタイン博士",
-    unlock: 320,
+    unlock: 450,
     icon: "🎓",
     description: "かなり難しい博士問題！"
   },
   {
     id: 5,
     name: "伝説の牛博士",
-    unlock: 500,
+    unlock: 550,
     icon: "👑",
     description: "ひっかけ問題を見抜こう！"
   }
