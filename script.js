@@ -1942,7 +1942,6 @@ function renderRecipes() {
 /* 詳細モーダルを開く */
 function openRecipeDetail(recipeIndex) {
   const recipe = recipes[recipeIndex];
- const recipe = recipes[recipeIndex];
 
 if (!recipe) {
   return;
@@ -1964,7 +1963,7 @@ if (!detail) {
     .map((step) => `<li>${step}</li>`)
     .join("");
 
-  modal.classList.add("show");
+$("#recipeModal").classList.add("show");
 }
 
 /* すでにレシピ画面を開いている場合も、すぐ表示を更新 */
