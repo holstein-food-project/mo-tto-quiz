@@ -407,7 +407,7 @@ const farmItems = [
     icon: "🌷",
     name: "花ばたけ",
     cost: 55,
-    unlock: 80,
+    unlock: 100,
     position: "left: 105px; bottom: 22px;"
   },
   {
@@ -415,7 +415,7 @@ const farmItems = [
     icon: "🌾",
     name: "ふかふか牧草",
     cost: 65,
-    unlock: 80,
+    unlock: 100,
     position: "right: 13px; bottom: 18px;"
   },
   {
@@ -423,7 +423,7 @@ const farmItems = [
     icon: "🚜",
     name: "トラクター",
     cost: 110,
-    unlock: 180,
+    unlock: 300,
     position: "left: 145px; bottom: 15px;"
   },
   {
@@ -431,7 +431,7 @@ const farmItems = [
     icon: "🎀",
     name: "牛のリボン",
     cost: 75,
-    unlock: 180,
+    unlock: 250,
     position: "right: 77px; bottom: 98px;"
   },
   {
@@ -439,7 +439,7 @@ const farmItems = [
     icon: "🏡",
     name: "牧場ハウス",
     cost: 180,
-    unlock: 320,
+    unlock: 400,
     position: "right: 7px; bottom: 68px;"
   }
 ];
