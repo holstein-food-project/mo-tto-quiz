@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff9ee" />
+    <title>モ〜っとクイズ！</title>
+
+    <!-- CSSファイルを読み込み -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <button
+          id="backBtn"
+          class="back-btn"
+          type="button"
+          aria-label="ホームへ戻る"
+        >
+          ‹
+        </button>
+
+        <div class="mini-logo">🐄 モ〜っとクイズ！</div>
+
+        <div class="point-box">
+          ⭐
+          <span id="pointText">0</span>
+          P
+        </div>
+      </header>
+
+      <!-- ホーム画面 -->
+      <main id="homeScreen" class="screen active">
+        <section class="hero">
+          <div class="badge">🌱 牧場で学ぶクイズゲーム</div>
+
+          <h1>モ〜っとクイズ！</h1>
+
+          <p>
+            ホルスタインを知って、
+            <br />
+            もっと好きになろう！
+          </p>
+
+          <div class="big-cow" role="img" aria-label="ホルスタイン牛">🐄</div>
+
+          <div class="speech">今日もモ〜っと学ぼう！</div>
+
+          <button id="startQuizBtn" class="main-btn" type="button">
+            ▶ クイズをはじめる！
+          </button>
+        </section>
+
+        <section class="menu-grid">
+          <button class="menu-card yellow" type="button" data-go="ranking">
+            <span>🏆</span>
+            <b>ランキング</b>
+            <small>記録をチェック</small>
+          </button>
+
+          <button class="menu-card blue" type="button" data-go="encyclopedia">
+            <span>📖</span>
+            <b>牛図鑑</b>
+            <small>知った牛を集めよう</small>
+          </button>
+
+          <button class="menu-card green" type="button" data-go="farm">
+            <span>🌱</span>
+            <b>牧場</b>
+            <small>自分だけの牧場</small>
+          </button>
+
+          <button class="menu-card pink" type="button" data-go="recipes">
+            <span>🍳</span>
+            <b>レシピ</b>
+            <small>おいしく楽しもう</small>
+          </button>
+        </section>
+
+        <section class="rank-card">
+          <small>現在のランク</small>
+          <h3 id="homeLevelText">Lv.1 ホルスタイン見習い</h3>
+
+          <div class="progress-bg">
+            <div id="homeProgress"></div>
+          </div>
+
+          <p id="nextLevelText">次のレベルまで 80P</p>
+        </section>
+      </main>
+
+      <!-- クイズレベル選択画面 -->
+      <main id="levelsScreen" class="screen">
+        <section class="page-title">
+          <span>🎯</span>
+
+          <div>
+            <h2>クイズをえらぶ</h2>
+            <p>1回10問！ 正解でポイントGET！</p>
+          </div>
+        </section>
+
+        <div id="levelList"></div>
+      </main>
+
+      <!-- クイズ画面 -->
+      <main id="quizScreen" class="screen">
+        <section class="quiz-status">
+          <div>
+            <span id="quizLevel" class="level-pill">Lv.1 見習い</span>
+            <b id="questionNumber">Q 1 / 10</b>
+          </div>
+
+          <div class="progress-bg">
+            <div id="quizProgress"></div>
+          </div>
+        </section>
+
+        <section class="quiz-cow-area">
+          <div
+            id="quizCow"
+            class="quiz-cow"
+            role="img"
+            aria-label="クイズ中の牛"
+          >
+            🐄
+          </div>
+
+          <div id="quizSpeech" class="speech">モ〜どっちかな？</div>
+        </section>
+
+        <section class="question-card">
+          <small>QUESTION</small>
+          <h2 id="questionText">問題を読み込み中...</h2>
+        </section>
+
+        <div id="choices" class="choices"></div>
+
+        <p id="comboText" class="combo-text">
+          🔥 連続正解でコンボボーナス！
+        </p>
+      </main>
+
+      <!-- 回答結果画面 -->
+      <main id="answerScreen" class="screen">
+        <div id="answerIcon" class="answer-icon">🎉</div>
+
+        <h1 id="answerTitle">正解！！</h1>
+
+        <div id="answerCow" class="answer-cow" role="img" aria-label="喜ぶ牛">
+          🐄
+        </div>
+
+        <div id="answerSpeech" class="speech">モ〜完璧！</div>
+
+        <section class="fact-card">
+          <b id="correctAnswer">正解：</b>
+          <p id="factText"></p>
+        </section>
+
+        <div id="earnedPointText" class="earned-point">⭐ +10ポイント</div>
+
+        <button id="nextBtn" class="main-btn" type="button">
+          次の問題へ →
+        </button>
+      </main>
+
+      <!-- 結果画面 -->
+      <main id="resultScreen" class="screen">
+        <section class="result-top">
+          <div class="result-cow" role="img" aria-label="牛">🐄</div>
+
+          <h1>クイズ結果！</h1>
+          <h2 id="resultScore">0 / 10問 正解！</h2>
+
+          <div id="resultStars" class="stars">⭐⭐⭐⭐⭐</div>
+        </section>
+
+        <section class="result-card">
+          <div>
+            <span>獲得ポイント</span>
+            <b id="resultPoint">⭐ +0P</b>
+          </div>
+
+          <div>
+            <span>現在のランク</span>
+            <b id="resultLevel">Lv.1 ホルスタイン見習い</b>
+          </div>
+
+          <p id="resultNextLevel"></p>
+        </section>
+
+        <button id="retryBtn" class="main-btn" type="button">
+          🔄 もう一回遊ぶ
+        </button>
+
+        <button id="homeBtn" class="sub-btn" type="button">
+          ホームに戻る
+        </button>
+      </main>
+
+      <!-- 牧場画面 -->
+      <main id="farmScreen" class="screen">
+        <section class="page-title">
+          <span>🌱</span>
+
+          <div>
+            <h2>わたしの牧場</h2>
+            <p>ポイントで牧場を育てよう！</p>
+          </div>
+        </section>
+
+        <section class="farm-view">
+          <div class="sun">☀️</div>
+          <div class="cloud">☁️</div>
+          <div class="barn">🏠</div>
+          <div class="farm-cow">🐄</div>
+
+          <div id="farmDecorations"></div>
+        </section>
+
+        <h3>牧場ショップ</h3>
+
+        <div id="farmShop" class="shop-grid"></div>
+      </main>
+
+      <!-- 牛図鑑画面 -->
+      <main id="encyclopediaScreen" class="screen">
+        <section class="page-title">
+          <span>📖</span>
+
+          <div>
+            <h2>牛図鑑</h2>
+            <p>クイズで知った牛を集めよう！</p>
+          </div>
+        </section>
+
+        <div id="bookList" class="card-list"></div>
+      </main>
+
+      <!-- レシピ画面 -->
+      <main id="recipesScreen" class="screen">
+        <section class="page-title">
+          <span>🍳</span>
+
+          <div>
+            <h2>牧場レシピ</h2>
+            <p>赤身のおいしさを楽しもう！</p>
+          </div>
+        </section>
+
+        <div id="recipeList" class="card-list"></div>
+      </main>
+
+      <!-- ランキング画面 -->
+      <main id="rankingScreen" class="screen">
+        <section class="page-title">
+          <span>🏆</span>
+
+          <div>
+            <h2>ランキング</h2>
+            <p>あなたの牧場の記録</p>
+          </div>
+        </section>
+
+        <section class="ranking-card">
+          <div class="medal">🥇</div>
+
+          <h3>モ〜っとクイズ！プレイヤー</h3>
+
+          <p>あなたの最高スコア</p>
+          <strong id="highScoreText">0 / 10問</strong>
+
+          <hr />
+
+          <p>合計ポイント</p>
+          <strong id="rankingPointText">⭐ 0P</strong>
+        </section>
+      </main>
+
+      <!-- レベルアップモーダル -->
+      <div id="levelModal" class="modal" role="dialog" aria-modal="true">
+        <section class="modal-card">
+          <div>🎉</div>
+
+          <small>LEVEL UP!</small>
+
+          <h2 id="modalLevelTitle">牧場スタッフになった！</h2>
+
+          <div class="modal-cow">🐄✨</div>
+
+          <p>
+            新しいクイズ・図鑑・レシピ・牧場アイテムが解放されました！
+          </p>
+
+          <button id="modalCloseBtn" class="main-btn" type="button">
+            やったモ〜！
+          </button>
+        </section>
+      </div>
+
+      <!-- レシピ詳細モーダル：ここを追加 -->
+      <div id="recipeModal" class="modal recipe-modal" role="dialog" aria-modal="true">
+        <section class="modal-card recipe-modal-card">
+          <button
+            id="recipeModalCloseBtn"
+            class="recipe-close"
+            type="button"
+            aria-label="レシピ詳細を閉じる"
+          >
+            ×
+          </button>
+
+          <div id="recipeModalIcon" class="recipe-detail-icon">🍳</div>
+
+          <small id="recipeModalLevel">Lv.1 牛肉レシピ集</small>
+
+          <h2 id="recipeModalTitle">料理名</h2>
+
+          <p id="recipeModalDifficulty" class="difficulty"></p>
+
+          <div class="recipe-detail-body">
+            <h3>■ 材料</h3>
+            <p id="recipeModalIngredients"></p>
+
+            <h3>■ 作り方</h3>
+            <ol id="recipeModalSteps"></ol>
+          </div>
+        </section>
+      </div>
+
+      <!-- 下部ナビゲーション -->
+      <nav class="bottom-nav" aria-label="メインナビゲーション">
+        <button class="nav-btn active" type="button" data-go="home">
+          🏠
+          <span>ホーム</span>
+        </button>
+
+        <button class="nav-btn" type="button" data-go="levels">
+          ❓
+          <span>クイズ</span>
+        </button>
+
+        <button class="nav-btn" type="button" data-go="farm">
+          🌱
+          <span>牧場</span>
+        </button>
+
+        <button class="nav-btn" type="button" data-go="recipes">
+          🍳
+          <span>レシピ</span>
+        </button>
+      </nav>
+
+      <!-- 紙吹雪演出用 -->
+      <div id="confetti"></div>
+    </div>
+
+    <!-- JavaScriptファイルを読み込み -->
+    <script src="script.js"></script>
+  </body>
+</html>
